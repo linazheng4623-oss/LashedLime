@@ -39,9 +39,9 @@
             height: 100%;
             background: linear-gradient(to bottom, 
                         rgba(15, 23, 42, 0) 0%, 
-                        rgba(15, 23, 42, 0.4) 40%,
-                        rgba(15, 23, 42, 0.8) 70%,
-                        rgba(15, 23, 42, 0.95) 100%);
+                        rgba(15, 23, 42, 0.3) 40%,
+                        rgba(15, 23, 42, 0.6) 70%,
+                        rgba(15, 23, 42, 0.8) 100%);
             z-index: -1;
         }
 
@@ -50,13 +50,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px 0;
+            padding: 15px 0;
             width: 100%;
             position: fixed;
             top: 0;
             left: 0;
-            background: rgba(15, 23, 42, 0.9);
-            backdrop-filter: blur(10px);
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(15px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             z-index: 100;
         }
@@ -64,6 +64,38 @@
         .nav-container {
             display: flex;
             gap: 30px;
+            align-items: center;
+        }
+
+        /* Logo Styles */
+        .logo {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #a3e635, #4ade80);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(163, 230, 53, 0.3);
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo:hover {
+            transform: translateY(-50%) scale(1.05);
+            box-shadow: 0 6px 20px rgba(163, 230, 53, 0.5);
+        }
+
+        .logo:active {
+            transform: translateY(-50%) scale(0.95);
         }
 
         .nav-link {
@@ -157,12 +189,12 @@
             line-height: 1.5;
         }
 
-        /* Download Box */
+        /* Download Box - More translucent */
         .download-box {
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(10px);
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(15px);
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
             border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 50px 40px;
             margin-bottom: 30px;
@@ -236,12 +268,12 @@
             border-bottom: 1px solid #bef264;
         }
 
-        /* We Have Box */
+        /* We Have Box - More translucent */
         .we-have-box {
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(10px);
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(15px);
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
             border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 40px;
         }
@@ -262,16 +294,18 @@
 
         .we-have-item {
             padding: 25px;
-            background: rgba(30, 41, 59, 0.7);
+            background: rgba(30, 41, 59, 0.5);
             border-radius: 15px;
             border-left: 4px solid #a3e635;
             transition: all 0.3s ease;
             text-align: center;
+            backdrop-filter: blur(5px);
         }
 
         .we-have-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background: rgba(163, 230, 53, 0.1);
         }
 
         .we-have-item h3 {
@@ -298,11 +332,12 @@
             text-shadow: 0 0 20px rgba(163, 230, 53, 0.3);
         }
 
+        /* Features Box - More translucent */
         .features-box {
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(10px);
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(15px);
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
             border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 40px;
         }
@@ -317,7 +352,7 @@
         .feature-item {
             position: relative;
             padding: 20px 15px;
-            background: rgba(30, 41, 59, 0.7);
+            background: rgba(30, 41, 59, 0.5);
             border-radius: 12px;
             border-left: 4px solid #a3e635;
             transition: all 0.3s ease;
@@ -326,6 +361,7 @@
             font-size: 1rem;
             color: #f1f5f9;
             cursor: pointer;
+            backdrop-filter: blur(5px);
         }
 
         .feature-item:hover {
@@ -341,7 +377,7 @@
             bottom: 120%;
             left: 50%;
             transform: translateX(-50%);
-            background: rgba(15, 23, 42, 0.95);
+            background: rgba(15, 23, 42, 0.9);
             color: #f1f5f9;
             padding: 12px 16px;
             border-radius: 8px;
@@ -355,6 +391,7 @@
             border: 1px solid rgba(163, 230, 53, 0.3);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             pointer-events: none;
+            backdrop-filter: blur(10px);
         }
 
         .feature-item:hover::after {
@@ -385,7 +422,7 @@
         }
 
         .more-coming {
-            background: rgba(30, 41, 59, 0.7);
+            background: rgba(30, 41, 59, 0.5);
             border-radius: 12px;
             padding: 25px;
             border-left: 4px solid #fbbf24;
@@ -393,14 +430,15 @@
             font-size: 1.2rem;
             font-weight: 600;
             color: #fbbf24;
+            backdrop-filter: blur(5px);
         }
 
-        /* FAQ Page Styles */
+        /* FAQ Page Styles - More translucent */
         .faq-container {
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(10px);
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(15px);
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
             border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 40px;
             text-align: left;
@@ -432,11 +470,12 @@
 
         .faq-item {
             margin-bottom: 30px;
-            background: rgba(30, 41, 59, 0.7);
+            background: rgba(30, 41, 59, 0.5);
             border-radius: 12px;
             padding: 25px;
             border-left: 4px solid #a3e635;
             transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
         }
 
         .faq-item:hover {
@@ -531,6 +570,14 @@
                 width: 200px;
                 text-align: center;
             }
+            
+            /* Adjust logo for mobile */
+            .logo {
+                left: 10px;
+                width: 35px;
+                height: 35px;
+                font-size: 1.2rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -565,12 +612,22 @@
                 width: 150px;
                 font-size: 0.8rem;
             }
+            
+            /* Hide logo on very small screens if needed */
+            .logo {
+                width: 30px;
+                height: 30px;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
+        <!-- Logo in top left corner -->
+        <a class="logo" data-tab="home">L</a>
+        
         <div class="nav-container">
             <a class="nav-link active" data-tab="home">Home</a>
             <a class="nav-link" data-tab="features">Features</a>
@@ -598,8 +655,8 @@
                 <h2 class="we-have-title">We Have</h2>
                 <div class="we-have-grid">
                     <div class="we-have-item">
-                        <h3>Advanced Flight</h3>
-                        <p>Multiple flight modes with customizable speeds and anti-kick</p>
+                        <h3>Advanced Bypasses</h3>
+                        <p>Smart anti-cheat evasion with multiple bypass methods and configurable settings</p>
                     </div>
                     <div class="we-have-item">
                         <h3>Optimized Performance</h3>
@@ -743,8 +800,9 @@
     </div>
 
     <script>
-        // Get all tab links
+        // Get all tab links and logo
         const tabLinks = document.querySelectorAll('.nav-link');
+        const logo = document.querySelector('.logo');
         
         // Function to switch tabs
         function switchTab(tabName) {
@@ -763,7 +821,12 @@
             document.getElementById(tabName).classList.add('active');
             
             // Set the clicked nav link as active
-            event.currentTarget.classList.add('active');
+            if (event && event.currentTarget.classList.contains('nav-link')) {
+                event.currentTarget.classList.add('active');
+            } else {
+                // If logo was clicked, set home as active
+                document.querySelector('.nav-link[data-tab="home"]').classList.add('active');
+            }
         }
         
         // Add click event listeners to all tab links
@@ -772,6 +835,11 @@
                 const tabName = this.getAttribute('data-tab');
                 switchTab.call(this, tabName);
             });
+        });
+        
+        // Add click event listener to logo
+        logo.addEventListener('click', function(e) {
+            switchTab('home');
         });
     </script>
 </body>
